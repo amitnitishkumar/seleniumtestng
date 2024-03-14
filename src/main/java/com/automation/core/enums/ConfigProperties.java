@@ -1,0 +1,12 @@
+package com.automation.core.enums;
+public enum ConfigProperties {
+	
+	URL,
+	OVERRIDEREPORTS,
+	PASSEDSTEPSSCREENSHOTS,
+	FAILEDSTEPSSCREENSHOTS,
+	RETRYFAILEDTESTS,
+	BROWSER,
+	HEADLESS
+	
+}
