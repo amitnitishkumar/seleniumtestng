@@ -49,3 +49,8 @@ Run Tests: Add run config in intellij as follow:
 3. Give name to the runner e.g. "runuitest"
 4. Select "Test Kind" as "Suite"
 5. Pass "Test runner params" as testng.xml
+
+To run using command line:
+1. Setup maven
+2. Navigate to project root folder i.e. seleniumtestng from command line
+3. run "mvn test"
