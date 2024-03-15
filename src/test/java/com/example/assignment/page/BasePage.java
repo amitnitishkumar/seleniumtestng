@@ -9,4 +9,12 @@ public abstract class BasePage {
     protected BasePage(){
         webDriverUtils = new WebDriverUtils(DriverManager.getDriver());
     }
+
+    public void switchToFrame(String nameOrId){
+        webDriverUtils.switchInIframe(nameOrId);
+    }
+
+    public void switchToDefaultContent(){
+        webDriverUtils.switchToDefaultContent();
+    }
 }

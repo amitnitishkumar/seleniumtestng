@@ -1,7 +1,10 @@
 package com.automation.core.listners;
 
 import com.automation.core.customannotations.TestMetaData;
+import com.automation.core.reports.ExtentManager;
 import com.automation.core.reports.ExtentReport;
+import com.automation.core.utils.ScreenshotUtils;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import org.testng.*;
 
 import java.util.Arrays;
@@ -37,6 +40,8 @@ public class ListenerClass implements ITestListener, ISuiteListener {
     public void onTestSuccess(ITestResult result) {
         //ExtentLogger.pass(result.getMethod().getMethodName() +" is passed");
         log(PASS,result.getMethod().getMethodName() +" is passed");
+        ExtentManager.getExtentTest().info("",
+                MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
     }
     @Override
     public void onTestFailure(ITestResult result) {

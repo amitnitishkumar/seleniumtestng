@@ -29,10 +29,10 @@ public final class FrameworkLogger {
     private static final Map<LogType,Consumer<String>> SCREENSHOTMAP = new EnumMap<>(LogType.class);
 
     static {
-        MAP.put(LogType.PASS, PASS);
-        MAP.put(LogType.FAIL, FAIL.andThen(TAKESCREENSHOT));
-        MAP.put(LogType.SKIP, SKIP);
-        MAP.put(LogType.INFO, INFO);
+        MAP.put(LogType.PASS, PASS.andThen(CONSOLE));
+        MAP.put(LogType.FAIL, FAIL.andThen(TAKESCREENSHOT).andThen(CONSOLE));
+        MAP.put(LogType.SKIP, SKIP.andThen(CONSOLE));
+        MAP.put(LogType.INFO, INFO.andThen(CONSOLE));
         MAP.put(LogType.CONSOLE, CONSOLE);
         MAP.put(LogType.EXTENTANDCONSOLE, EXTENTANDCONSOLE);
         SCREENSHOTMAP.put(LogType.PASS, PASS.andThen(TAKESCREENSHOT));

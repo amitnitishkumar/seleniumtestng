@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" data-provider-thread-count="3" >
+<suite name="McPizzaSuite" data-provider-thread-count="3" >
  <listeners>
     <listener class-name="com.automation.core.listners.ListenerClass" />
     <listener class-name="com.automation.core.listners.MethodInterceptor" />
     <listener class-name="com.automation.core.listners.AnnotationTransformer" />
   </listeners>
 
-  <test thread-count="1" name="Test" parallel="methods">
+  <test thread-count="2" name="McPizzaTests" parallel="methods">
     <classes>
-      <class name="com.example.assignment.test.LoginpageTests"/>
+      <class name="com.example.assignment.test.McPizzaTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -24,7 +24,6 @@ public abstract class BaseTest {
     protected void tearDown(ITestResult result) {
         if(result.getStatus() == ITestResult.FAILURE){
             FrameworkLogger.log(LogType.FAIL, result.getThrowable().getMessage());
-            throw new RuntimeException(result.getThrowable().getMessage());
         }
         Driver.quitDriver();
     }

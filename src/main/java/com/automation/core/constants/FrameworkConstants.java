@@ -9,7 +9,7 @@ public class FrameworkConstants {
     private FrameworkConstants() {
     }
     public static final String SLASH = File.separator;
-    private static final int EXPLICITWAIT = 30;
+    private static final int EXPLICITWAIT = 10;
     private static final String RESOURCESPATH = System.getProperty("user.dir") + SLASH+ "src"+SLASH+"test"+SLASH+"resources";
     private static final String CONFIGFILEPATH = RESOURCESPATH + SLASH+ "config"+SLASH+"config.properties";
     private static final String EXCELPATH = RESOURCESPATH + SLASH +"excel"+SLASH+"testdata.xlsx";
