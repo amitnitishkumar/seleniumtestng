@@ -4,21 +4,6 @@ Selenium TestNG Repository Readme
 
 This repository contains a Selenium TestNG project designed for web automation testing. It utilizes various listeners such as AnnotationTransformer, SuiteListener, TestListener, MethodInterceptor, and IRetryAnalyzer for comprehensive test management and execution. Additionally, it employs Excel sheets for controlling test execution via the RunManager sheet and accessing test data from the DATA sheet.
 
-Project Structure
-markdown
-Copy code
-- src
-  - main
-  - test
-    - java
-      - com.example.tests
-        - TestClass1.java
-        - TestClass2.java
-        - ...
-    - resources
-      - testdata.xlsx
-- pom.xml
-- testng.xml
 Listeners Utilized
 AnnotationTransformer: Modifies test class annotations at runtime.
 SuiteListener: Performs actions before and after test suite execution.
