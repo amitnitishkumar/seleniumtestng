@@ -17,8 +17,7 @@ public class McPizzaTests extends BaseTest {
         ExtentManager.getExtentTest().getModel().setName(testData.get("testdescription"));
         McPizzaAgentModule.getInstance()
                 .loginToMcPizzaAgent(testData)
-                .placeAnOrder(testData)
-                .giveFeedback(testData);
+                .placeAnOrder(testData);
     }
 
     @Test(dataProvider = "serial")
@@ -28,6 +27,15 @@ public class McPizzaTests extends BaseTest {
         McPizzaAgentModule.getInstance()
                 .loginToMcPizzaAgent(testData)
                 .makeUnfullfilledQuery(testData);
+    }
+
+    @Test(dataProvider = "serial")
+    @TestMetaData(author = "Nitish",category = CategoryType.REGRESSION)
+    public void giveFeedbackOrderMcPizza(Map<String,String> testData){
+        McPizzaAgentModule.getInstance()
+                .loginToMcPizzaAgent(testData)
+                .placeAnOrder(testData)
+                .giveFeedback(testData);
     }
 
 
